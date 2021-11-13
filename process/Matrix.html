@@ -4,14 +4,14 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Adrestia Project – Adrestia Project Docs
+    Matrix Team Chat – Adrestia Project Docs
   </title>
   
     
       <meta property='og:description' content />
       <meta property='og:site_name' content='Adrestia Project Docs' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Adrestia Project' />
+      <meta property='og:title' content='Matrix Team Chat' />
     
     
       <base href='/adrestia/' />
@@ -92,6 +92,26 @@
             
           
         </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Adrestia Project
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='process'>
+                Process
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
         
       </ul>
     </div>
@@ -888,11 +908,7 @@
     
       <!-- Variable bindings for this tree-->
   
-    
-      
-    
-    
-
+  
 
 
   
@@ -905,12 +921,12 @@
     
     
       <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
         </path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='Matrix Team Chat' href='process/Matrix'>
+    <a class='font-bold text-indigo-600 hover:underline truncate' title='Matrix Team Chat' href='process/Matrix'>
       Matrix Team Chat
     </a>
     
@@ -3238,107 +3254,291 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-indigo-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Adrestia Project
+    Matrix Team Chat
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  <div class='px-3 py-1 rounded shadow bg-yellow-100 mx-2 transform -skew-y-1 scale-95 hover:scale-100 hover:border-yellow-400 hover:shadow-lg border-t-8 border-yellow-200 mb-8 mt-8 max-w-md mx-auto'>
+  
     <p class='mb-3'>
-      <strong>Under Construction!</strong>
+      Our team’s homeserver is <a href='https://matrix.adrestia.iohkdev.io/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>adrestia.iohkdev.io</a>.
+    </p>
+  <h2 id='web-client' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Web client</h2>
+    <p class='mb-3'>
+      You can log in immediately with your web browser, without installing any client software by visiting:
+    </p>
+  <div class='m-8'>
+    <p class='mb-3'>
+      <a href='https://element.adrestia.iohkdev.io/' class='py-4 px-8 bg-indigo-200 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75 text-indigo-600 hover:underline' target='_blank' rel='noopener'>element.adrestia.iohkdev.io</a>
+    </p>
+  </div><h2 id='authentication' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Authentication</h2>
+    <p class='mb-3'>
+      Any user with an active <a href='https://accounts.google.com' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>iohk.io Google Account</a> can log in.
     </p>
   
     <p class='mb-3'>
-      These docs have just moved from the wiki and are in the process of being re-organised and updated.
-    </p>
-  </div><div class='rounded-t-xl bg-gradient-to-b from-indigo-100 to-indigo-400 bg-white p-8 mb-4'><div class='grid grid-cols-2 gap-4 p-3 bg-indigo-500 md:grid-cols-3'>
-    <p class='mb-3'>
-      <a href='code' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Code (what)</a>
+      Some people have username/password accounts. These were created manually with the Matrix Synapse user admin API.
     </p>
   
     <p class='mb-3'>
-      <a href='process' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Process (how)</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='resources' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Resources</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/tags' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Tags</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/all' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Index</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/tasks' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Docs TODO List</a>
-    </p>
-  </div></div><h2 id='what-is-adrestia' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>What is Adrestia?</h2>
-    <p class='mb-3'>
-      Adrestia is a process, a suite of products, and a team within IOHK.
-    </p>
-  <h3 id='process' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Process</h3>
-    <p class='mb-3'>
-      Our vision is to produce a set of orthogonal and self-contained services and APIs to support Cardano applications such as wallets and explorer applications.
-    </p>
-  
-    <p class='mb-3'>
-      These services are developed in a usable, reliable, extensible, and maintainable way. These are our processes and practices.
-    </p>
-  
-    <p class='mb-3'>
-      See:
+      Example usernames:
     </p>
   
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='code' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Code</a>
+          IOHK Google account: <a href='https://element.adrestia.iohkdev.io/#/user/@rodney.lorrimar:adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>@rodney.lorrimar:adrestia.iohkdev.io</a>
         </li>
       
         <li>
-          <a href='process' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Process</a>
+          Username/password account: <a href='https://element.adrestia.iohkdev.io/#/user/@rvl:adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>@rvl:adrestia.iohkdev.io</a>
         </li>
       
     </ul>
-  <h3 id='products' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Products</h3>
+  <h3 id='other-homeservers' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Other homeservers</h3>
     <p class='mb-3'>
-      Our flagship product is <a href='cardano-wallet' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet</a>, which is a HTTP service for sending and receiving payments on the Cardano blockchain.
+      If you have a user on another Matrix homeserver (e.g. <a href='https://matrix.org' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>matrix.org</a>), then you can ask to be invited into rooms on our homeserver.
     </p>
   
     <p class='mb-3'>
-      <a href='cardano-wallet' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet</a> is a application which can be used on its own, but usually it will be used as the backend service of other applications such as a desktop wallet app, in a web shop, or at a cryptocurrency exchange.
+      However you may wish to keep your personal accounts separate from IOHK.
+    </p>
+  <h3 id='mfa' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>MFA</h3>
+    <p class='mb-3'>
+      Sadly, neither U2F nor TOTP are supported by Matrix and Element yet.
     </p>
   
     <p class='mb-3'>
-      Underlying the service applications are several Haskell packages which developers can use to create new applications based on Cardano.
+      But if you use your Google account to log in then you will get MFA through Google.
+    </p>
+  <h3 id='changing-your-password' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Changing your password</h3>
+    <p class='mb-3'>
+      Unless using your Google account to log in, you will have a password.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          When changing your password, <strong>export your E2E room keys</strong> when prompted!
+        </li>
+      
+        <li>
+          It will need a temporary password to encrypt the file. It’s probably easiest just to use your new password for this purpose.
+        </li>
+      
+        <li>
+          After changing your password, import your E2E room keys again.
+        </li>
+      
+        <li>
+          Delete the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>element-keys.txt</code> file from your downloads directory when finished.
+        </li>
+      
+    </ul>
+  <h2 id='rooms-and-spaces' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Rooms and Spaces</h2>
+    <p class='mb-3'>
+      Once you are logged in, ask someone to invite you to the Adrestia <em>space</em> (it’s a private space).
     </p>
   
     <p class='mb-3'>
-      See:
+      Within this space we have multiple rooms available:
     </p>
   
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='code/Adrestia-Architecture' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Architecture</a>
+          <a href='https://element.adrestia.iohkdev.io/#/room/#team:adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>#team:adrestia.iohkdev.io</a> (invite only) - Adrestia team and special guests.
         </li>
       
         <li>
-          <a href='cardano-wallet/user-guide' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet User Guide</a>
+          <a href='https://element.adrestia.iohkdev.io/#/room/#testing:adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>#testing:adrestia.iohkdev.io</a> - Used for experimenting with Matrix chat.
+        </li>
+      
+        <li>
+          <a href='https://element.adrestia.iohkdev.io/#/room/#dev:adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>#dev:adrestia.iohkdev.io</a> (invite only) - Development discussion.
         </li>
       
     </ul>
-  <h3 id='team' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Team</h3>
+  <h2 id='end-to-end-encryption' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>End-to-end Encryption</h2>
     <p class='mb-3'>
-      Adrestia are also the <a href='https://github.com/orgs/input-output-hk/teams/adrestia/members' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>engineering team</a> whose goal is to bring Cardano to users and developers through our products.
+      This is a way to send messages via a Matrix homeserver, without the server operator being able to read the messages.
+    </p>
+  <h3 id='security-key' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Security Key</h3>
+    <p class='mb-3'>
+      The <em>Security Key</em> (also called “Recovery Key”) is an encryption key stored locally by Matrix clients, used for creating session keys, storing end-to-end encryption keys, and so on.
     </p>
   
     <p class='mb-3'>
-      We work with the Cardano community and alongside other teams in IOHK.
+      It is formatted as 12 quartets of alphanumeric characters, e.g.
     </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>EsTD cdDd eEff 0011 2233 4455 6677 8899 aabb ccdd eeff gg1F</code></pre></div><h3 id='cross-signing' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Cross-signing</h3>
+    <p class='mb-3'>
+      Cross-signing is where you verify your other login sessions. For example, you may have login sessions on multiple computers, each with their own session key.
+    </p>
+  
+    <p class='mb-3'>
+      If you cross-sign all your sessions, then other clients can consider all of your logins to be verified, just by verifying one of your logins.
+    </p>
+  
+    <p class='mb-3'>
+      And, importantly, you will be able to read your encrypted history on other logins.
+    </p>
+  
+    <p class='mb-3'>
+      To enable it, choose <em>Set up encryption</em> in your Element settings.
+    </p>
+  <h3 id='unable-to-decrypt-errors' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>“Unable to decrypt” errors</h3>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          The sender doesn’t know you exist, because when they sent the the message their server hadn’t yet seen you were in the room.
+        </li>
+      
+    </ul>
+  <h2 id='other-clients' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Other clients</h2>
+    <p class='mb-3'>
+      You can use any Matrix client to connect to this homeserver. <a href='https://matrix.org/clients/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Here is a list</a>. Apparently it’s even possible to use Matrix from <a href='resources/Emacs' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Emacs setup</a>.
+    </p>
+  <h2 id='homeserver-software' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Homeserver Software</h2>
+    <p class='mb-3'>
+      Our homeserver is running <a href='https://github.com/matrix-org/synapse' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Matrix Synapse</a> under <a href='https://nixos.org/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>NixOS 21.05</a>.
+    </p>
+  <h2 id='logging' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Logging</h2>
+    <p class='mb-3'>
+      All messages are logged and stored in the server’s PostgreSQL database, which is backed up with encryption.
+    </p>
+  
+    <p class='mb-3'>
+      Keep in mind that unless you enable end-to-end encryption in your room, message content will be stored as plaintext in the PostgreSQL <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>event_json</code> table.
+    </p>
+  <h2 id='room-settings' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Room Settings</h2>
+    <p class='mb-3'>
+      Some recommendations for settings.
+    </p>
+  <h3 id='space' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Space</h3>
+    <p class='mb-3'>
+      Adrestia.
+    </p>
+  <h3 id='privatepublic' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Private/Public</h3>
+    <p class='mb-3'>
+      Private channels are invitation only.
+    </p>
+  <h3 id='encryption' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Encryption</h3>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Use E2E encryption for your direct messages.
+        </li>
+      
+        <li>
+          Use E2E encryption for special rooms.
+        </li>
+      
+        <li>
+          Until we resolve the (un)usability issues with E2E encryption, don’t enable it on our commonly used rooms.
+        </li>
+      
+    </ul>
+  <h3 id='history' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>History</h3>
+    <p class='mb-3'>
+      TBD
+    </p>
+  <h3 id='publish-names' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Publish names</h3>
+    <p class='mb-3'>
+      TBD
+    </p>
+  <h2 id='federation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Federation</h2>
+    <p class='mb-3'>
+      Federation <a href='https://federationtester.matrix.org/api/report?server_name=adrestia.iohkdev.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>works</a> on this homeserver, as long as the room had the “Enable guest access” Security & Privacy advanced setting enabled when it was created.
+    </p>
+  
+    <p class='mb-3'>
+      Note: once the “Enable guest access” option has been disabled once, it will never be possible to invite users from other homeservers, no matter what the setting is changed to.
+    </p>
+  <h2 id='message-search' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Message Search</h2>
+    <p class='mb-3'>
+      Search works in the Element client. Click the little magnifying glass button in the upper-right corner.
+    </p>
+  <h3 id='encrypted-messages' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Encrypted messages</h3>
+    <p class='mb-3'>
+      I found this nugget:
+    </p>
+  
+    <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
+      
+    <p class='mb-3'>
+      Element can’t securely cache encrypted messages locally while running in a web browser. Use Element Desktop for encrypted messages to appear in search results.
+    </p>
+  
+    </blockquote>
+  <h2 id='glossary' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Glossary</h2>
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Matrix: a messaging protocol, the project which develops the messaging protocol, and the organisation which runs the Matrix project.
+        </li>
+      
+        <li>
+          Homeserver: a HTTP server running Matrix server software. The Matrix protocol is <em>federated</em>, which means that users on one homeserver can join chat rooms on another homeserver. The homeserver handles authentication of its users, and hosts rooms.
+        </li>
+      
+        <li>
+          <a href='https://matrix.org' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>matrix.org</a>: This domain name functions both as the Matrix project web site, and also as the domain name for a large public Matrix homeserver.
+        </li>
+      
+        <li>
+          <a href='https://github.com/matrix-org/synapse' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Synapse</a>: The reference implementation of a Matrix homeserver. There is also a new homeserver under development called “<a href='https://github.com/matrix-org/dendrite' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Dendrite</a>.”
+        </li>
+      
+        <li>
+          <a href='https://element.io/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Element</a>: a Matrix client implemented with web technologies such as <a href='https://reactjs.org' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>React</a>. It can deployed on any HTTP server - in this form it is called <a href='https://app.element.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'><em>Element Web</em></a>. Or it can be installed as an Electron app on the desktop or mobile devices.
+        </li>
+      
+        <li>
+          Riot: This is what the Element client used to be called before they renamed it.
+        </li>
+      
+    </ul>
+  <h2 id='missing-features' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>“Missing” Features</h2>
+    <p class='mb-3'>
+      The following things would be nice to have in Matrix, but currently aren’t implemented:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          Message threads
+        </li>
+      
+        <li>
+          Custom emoji
+        </li>
+      
+        <li>
+          U2F
+        </li>
+      
+    </ul>
+  <h2 id='references' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>References</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          <a href='https://matrix.org' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>The Matrix Web Site</a>
+        </li>
+      
+        <li>
+          <a href='https://element.io/blog/e2e-encryption-by-default-cross-signing-is-here/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Element Blog: E2E Encryption by Default & Cross-signing is here</a>
+        </li>
+      
+        <li>
+          <a href='https://matrix.org/docs/guides/implementing-more-advanced-e-2-ee-features-such-as-cross-signing' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Matrix Implementers Guide: E2EE</a>
+        </li>
+      
+        <li>
+          <a href='https://gerstner.it/2021/02/matrix-and-e2e-encryption-or-how-not-to-lose-your-messages/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Matrix and E2E Encryption (or: how not to lose your messages)</a>
+        </li>
+      
+    </ul>
   
   <!-- What goes in this file will appear below the note body-->
 </article>
@@ -3350,21 +3550,6 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='resources/Onboarding'>
-            Onboarding Checklist
-          </a>
-          
-            <div class='mb-4 overflow-auto text-sm text-gray-500'>
-  
-    <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
-      <div><a href='' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Adrestia Project</a> General documentation about the Adrestia umbrella project, and what it is.</div>
-    </div>
-  
-</div>
-          
-        </li>
-      
-        <li>
           <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='process/Communication-Conventions'>
             Communication conventions
           </a>
@@ -3372,7 +3557,26 @@
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
-      <div><p>If a process or practices decision has been reached, record it in the <a href='' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Adrestia docs</a> repository.</p></div>
+      <div><p>See <a href='process/Matrix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkBranch'>Matrix Team Chat</a> for information about how to use the team chat rooms.</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+        <li>
+          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='process/Chat-Rooms'>
+            Chat Rooms
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
+      <div><p>Here are a list of Slack channels / <a href='process/Matrix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Matrix Team Chat</a> chat rooms that we use.</p></div>
+    </div>
+  
+    <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
+      <div><h2><a href='process/Matrix' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Matrix Team Chat</a></h2></div>
     </div>
   
 </div>

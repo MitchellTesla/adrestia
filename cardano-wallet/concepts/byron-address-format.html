@@ -4,14 +4,14 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Adrestia Project – Adrestia Project Docs
+    Byron Address Format – Adrestia Project Docs
   </title>
   
     
       <meta property='og:description' content />
       <meta property='og:site_name' content='Adrestia Project Docs' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Adrestia Project' />
+      <meta property='og:title' content='Byron Address Format' />
     
     
       <base href='/adrestia/' />
@@ -92,6 +92,35 @@
             
           
         </li>
+        
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href=''>
+                Adrestia Project
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='cardano-wallet'>
+                Cardano Wallet
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='cardano-wallet/concepts'>
+                Key Concepts
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
         
       </ul>
     </div>
@@ -2133,11 +2162,7 @@
     
       <!-- Variable bindings for this tree-->
   
-    
-      
-    
-    
-
+  
 
 
   
@@ -2150,12 +2175,12 @@
     
     
       <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
         </path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='Byron Address Format' href='cardano-wallet/concepts/byron-address-format'>
+    <a class='font-bold text-indigo-600 hover:underline truncate' title='Byron Address Format' href='cardano-wallet/concepts/byron-address-format'>
       Byron Address Format
     </a>
     
@@ -3238,106 +3263,192 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-indigo-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Adrestia Project
+    Byron Address Format
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  <div class='px-3 py-1 rounded shadow bg-yellow-100 mx-2 transform -skew-y-1 scale-95 hover:scale-100 hover:border-yellow-400 hover:shadow-lg border-t-8 border-yellow-200 mb-8 mt-8 max-w-md mx-auto'>
+  <h2 id='internal-structure' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Internal Structure</h2><div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>+-------------------------------------------------------------------------------+
+|                                                                               |
+|                        CBOR-Serialized Object with CRC¹                       |
+|                                                                               |
++-------------------------------------------------------------------------------+
+                                        |
+                                        |
+                                        v
++-------------------------------------------------------------------------------+
+|     Address Root    |     Address Attributes    |           AddrType          |
+|                     |                           |                             |
+|   Hash (224 bits)   |  Der. Path² + Stake + NM  |  PubKey | (Script) | Redeem |
+|                     |    (open for extension)   |     (open for extension)    |
++-------------------------------------------------------------------------------+
+             |                 |
+             |                 |     +----------------------------------+
+             v                 |     |        Derivation Path           |
++---------------------------+  |----&gt;|                                  |
+| SHA3-256                  |  |     | ChaChaPoly⁴ AccountIx/AddressIx  |
+|   |&gt; Blake2b 224          |  |     +----------------------------------+
+|   |&gt; CBOR                 |  |
+|                           |  |
+|  -AddrType                |  |     +----------------------------------+
+|  -ASD³ (~AddrType+PubKey) |  |     |       Stake Distribution         |
+|  -Address Attributes      |  |     |                                  |
++---------------------------+  |----&gt;|  BootstrapEra | (Single | Multi) |
+                               |     +----------------------------------+
+                               |
+                               |
+                               |     +----------------------------------+
+                               |     |          Network Magic           |
+                               |----&gt;|                                  |
+                                     | Addr Discr: MainNet vs TestNet   |
+                                     +----------------------------------+
+</code></pre></div>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
     <p class='mb-3'>
-      <strong>Under Construction!</strong>
+      CRC: <a href='https://computer.howstuffworks.com/encryption7.htm' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Cyclic Redundancy Check</a>; sort of checksum, a bit (pun intended) more reliable.
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      These docs have just moved from the wiki and are in the process of being re-organised and updated.
-    </p>
-  </div><div class='rounded-t-xl bg-gradient-to-b from-indigo-100 to-indigo-400 bg-white p-8 mb-4'><div class='grid grid-cols-2 gap-4 p-3 bg-indigo-500 md:grid-cols-3'>
-    <p class='mb-3'>
-      <a href='code' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Code (what)</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='process' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Process (how)</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='resources' class='h-32 p-4 border-4 bg-white rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Resources</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/tags' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Tags</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/all' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Index</a>
-    </p>
-  
-    <p class='mb-3'>
-      <a href='-/tasks' class='h-32 p-4 border-4 bg-indigo-100 rounded-md flex items-center justify-center text-center text-2xl font-extrabold hover:bg-indigo-300 hover:border-yellow-600 hover:no-underline text-indigo-600 font-bold hover:underline'>Docs TODO List</a>
-    </p>
-  </div></div><h2 id='what-is-adrestia' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>What is Adrestia?</h2>
-    <p class='mb-3'>
-      Adrestia is a process, a suite of products, and a team within IOHK.
-    </p>
-  <h3 id='process' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Process</h3>
-    <p class='mb-3'>
-      Our vision is to produce a set of orthogonal and self-contained services and APIs to support Cardano applications such as wallets and explorer applications.
-    </p>
-  
-    <p class='mb-3'>
-      These services are developed in a usable, reliable, extensible, and maintainable way. These are our processes and practices.
-    </p>
-  
-    <p class='mb-3'>
-      See:
+      ASD: Address Spending Data; Some data that are bound to an address. It’s an extensible object with payload which identifies one of the three elements:
     </p>
   
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='code' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Code</a>
+          A Public Key (Payload is thereby a PublicKey)
         </li>
       
         <li>
-          <a href='process' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Process</a>
+          A Script (Payload is thereby a script and its version)
+        </li>
+      
+        <li>
+          A Redeem Key (Payload is thereby a RedeemPublicKey)
         </li>
       
     </ul>
-  <h3 id='products' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Products</h3>
+  
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      Our flagship product is <a href='cardano-wallet' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet</a>, which is a HTTP service for sending and receiving payments on the Cardano blockchain.
+      Derivation Path: Note that there’s no derivation path for Redeem nor Scripts addresses!
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='cardano-wallet' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet</a> is a application which can be used on its own, but usually it will be used as the backend service of other applications such as a desktop wallet app, in a web shop, or at a cryptocurrency exchange.
+      ChaChaPoly: Authenticated Encryption with Associated Data; See <a href='https://datatracker.ietf.org/doc/rfc7539' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>RFC 7539</a> We use it as a way to cipher the derivation path using a passphrase (the root public key).
     </p>
   
+        </li>
+      
+    </ul>
+  <h2 id='example-1-yoroi-address---byron-mainnet' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Example 1: Yoroi Address - Byron Mainnet</h2>
     <p class='mb-3'>
-      Underlying the service applications are several Haskell packages which developers can use to create new applications based on Cardano.
+      Let’s take an arbitrary Yoroi base58-encoded address of the Byron mainNet:
     </p>
-  
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>Ae2tdPwUPEZFRbyhz3cpfC2CumGzNkFBN2L42rcUc2yjQpEkxDbkPodpMAi</code></pre></div>
     <p class='mb-3'>
-      See:
+      Now, this address could be represented as a raw bytestring by decoding from base58:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>0X82 0XD8 0X18 0X58 0X21 0X83 0X58 0X1C 0XBA 0X97 0X0A 0XD3 0X66 0X54
+0XD8 0XDD 0X8F 0X74 0X27 0X4B 0X73 0X34 0X52 0XDD 0XEA 0XB9 0XA6 0X2A
+0X39 0X77 0X46 0XBE 0X3C 0X42 0XCC 0XDD 0XA0 0X00 0X1A 0X90 0X26 0XDA
+0X5B</code></pre></div>
+    <p class='mb-3'>
+      In this representation, bytes are in a structured format called <a href='https://tools.ietf.org/html/rfc7049' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>CBOR</a>. Some bytes are actually tags which carry a particular semantic, and some are values. We can re-shuffle the bytes as follows to make things a bit clearer:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>82                        # array (2)
+   D8 18                  # tag (24)             [CBOR Metadata]
+      58 21 (8358...A000) # bytes (33)           [Address Payload]
+   1A 9026DA5B            # unsigned(2418465371) [CRC]</code></pre></div>
+    <p class='mb-3'>
+      So, a Byron address is basically formed of two top-level elements:
     </p>
   
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='code/Adrestia-Architecture' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Architecture</a>
+          A tagged bytestring; <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>24</code> means that the bytes represent another CBOR-encoded structure.
         </li>
       
         <li>
-          <a href='cardano-wallet/user-guide' class='text-indigo-600 font-bold hover:underline' data-wikilink-type='WikiLinkNormal'>Cardano Wallet User Guide</a>
+          A CRC of the inner tagged bytestring
         </li>
       
     </ul>
-  <h3 id='team' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Team</h3>
-    <p class='mb-3'>
-      Adrestia are also the <a href='https://github.com/orgs/input-output-hk/teams/adrestia/members' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>engineering team</a> whose goal is to bring Cardano to users and developers through our products.
-    </p>
   
     <p class='mb-3'>
-      We work with the Cardano community and alongside other teams in IOHK.
+      Now, if we also interpret the inner bytestring as a CBOR structure, we obtain:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>83                        # array(3)
+   58 1C (BA97...CCDD)    # bytes(28)      [Address Root]
+   A0                     # map(0)         [Address Attributes]
+   00                     # unsigned(0)    [Address Type]</code></pre></div>
+    <p class='mb-3'>
+      An address type of <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>0</code> refers to a spending address for which the address root contains a hash of a public spending key. This address payload has no attribute for the initial address was a Yoroi’s address on MainNet which follows a BIP-44 derivation scheme and therefore, does not require any attributes.
+    </p>
+  <h2 id='example-2-daedalus-address---byron-testnet' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Example 2: Daedalus Address - Byron TestNet</h2>
+    <p class='mb-3'>
+      Let’s take an arbitrary Daedalus base58-encoded address of a Byron testNet:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>37btjrVyb4KEB2STADSsj3MYSAdj52X5FrFWpw2r7Wmj2GDzXjFRsHWuZqrw7zSkwopv8Ci3VWeg6bisU9dgJxW5hb2MZYeduNKbQJrqz3zVBsu9nT</code></pre></div>
+    <p class='mb-3'>
+      Now, this address could be represented as a raw bytestring by decoding from base58:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>0X82 0XD8 0X18 0X58 0X49 0X83 0X58 0X1C 0X9C 0X70 0X85 0X38 0XA7 0X63 0XFF 0X27
+0X16 0X99 0X87 0XA4 0X89 0XE3 0X50 0X57 0XEF 0X3C 0XD3 0X77 0X8C 0X05 0XE9 0X6F
+0X7B 0XA9 0X45 0X0E 0XA2 0X01 0X58 0X1E 0X58 0X1C 0X9C 0X17 0X22 0XF7 0XE4 0X46
+0X68 0X92 0X56 0XE1 0XA3 0X02 0X60 0XF3 0X51 0X0D 0X55 0X8D 0X99 0XD0 0XC3 0X91
+0XF2 0XBA 0X89 0XCB 0X69 0X77 0X02 0X45 0X1A 0X41 0X70 0XCB 0X17 0X00 0X1A 0X69
+0X79 0X12 0X6C</code></pre></div>
+    <p class='mb-3'>
+      In this representation, bytes are in a structured format called <a href='https://tools.ietf.org/html/rfc7049' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>CBOR</a>. Some bytes are actually tags which carry a particular semantic, and some are values. We can re-shuffle the bytes as follows to make things a bit clearer:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>82                         # array(2)
+   D8 18                   # tag(24)               [CBOR Metadata]
+      58 49 (8358...1700)  # bytes(73)             [Address Payload]
+   1A 6979126C             # unsigned(1769542252)  [CRC]</code></pre></div>
+    <p class='mb-3'>
+      So, a Byron address is basically formed of two top-level elements:
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          A tagged bytestring; <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>24</code> means that the bytes represent another CBOR-encoded structure.
+        </li>
+      
+        <li>
+          A CRC of the inner tagged bytestring
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Now, if we also interpret the inner bytestring as a CBOR structure, we obtain:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='language-none'>83                                      # array(3)
+   58 1C (9C70...450E)                  # bytes(28)    [Address Root]
+   A2                                   # map(2)       [Address Attributes]
+      01                                # unsigned(1)  [Derivation Path Attribute]
+      58 1E (581C...6977)               # bytes(30)    [Derivation Path Value]
+      02                                # unsigned(2)  [Network Magic Attribute]
+      45 (1A4170CB17)                   # bytes(5)     [Network Magic Value]
+   00                                   # unsigned(0)  [Address Type]</code></pre></div>
+    <p class='mb-3'>
+      An address type of <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>0</code> refers to a spending address for which the address root contains a hash of a public spending key. In addition, we can see that this address has 2 attributes identified by two tags <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>01</code> for the derivation path, and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>02</code> for the network magic. The derivation path is an encrypted bytestring which holds two derivation indexes for the account and address paths.
     </p>
   
   <!-- What goes in this file will appear below the note body-->
@@ -3350,14 +3461,14 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='resources/Onboarding'>
-            Onboarding Checklist
+          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='cardano-wallet/concepts/utxo'>
+            UTxO
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
-      <div><a href='' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Adrestia Project</a> General documentation about the Adrestia umbrella project, and what it is.</div>
+      <div><a href='cardano-wallet/concepts/byron-address-format' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Byron Address Format</a></div>
     </div>
   
 </div>
@@ -3365,14 +3476,14 @@
         </li>
       
         <li>
-          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='process/Communication-Conventions'>
-            Communication conventions
+          <a class='text-indigo-600 font-bold hover:bg-indigo-50' href='cardano-wallet/user-guide/common-use-cases/how-to-create-a-wallet'>
+            How to create a wallet
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
-      <div><p>If a process or practices decision has been reached, record it in the <a href='' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Adrestia docs</a> repository.</p></div>
+      <div><p>See more on <a href='cardano-wallet/concepts/hierarchical-deterministic-wallets' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>HD Wallets</a> and <a href='cardano-wallet/concepts/byron-address-format' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Byron Address Format</a>.</p></div>
     </div>
   
 </div>
