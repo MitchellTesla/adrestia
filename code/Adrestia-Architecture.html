@@ -17,15 +17,39 @@
       <base href='/adrestia/' />
       <link href='static/favicon.png' rel='icon' />
     
-    <!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
+    <meta name='generator' content='Emanote' />
+<meta http-equiv='cache-control' content='private, max-age=60' />
+<meta http-equiv='Expires' content='60' />
+<link href='static/adrestia.css' rel='stylesheet' />
+<script src='static/adrestia.js'></script>
+
+<!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
 <script>
-  mermaid.initialize({startOnLoad:false});
-  mermaid.init(undefined,document.querySelectorAll(".mermaid"));
+  var myMermaidConfig = {
+    // lets mermaid work with emanote live-reloading
+    startOnLoad: false,
+    // permit clicks
+    securityLevel: "loose",
+    // set default theme with primary colour to tailwind blue
+    theme: "base",
+    themeVariables: {
+      primaryColor: "#e0e7ff",
+      secondaryColor: "#fffde0"
+    },
+    // d3js rounded lines in flowcharts
+    flowchart: {
+      curve: "basis",
+      htmlLabels: true
+    }
+  };
+  mermaid.initialize(myMermaidConfig);
+  mermaid.init(myMermaidConfig, document.querySelectorAll(".mermaid"));
 </script>
+
+<script src='https://kit.fontawesome.com/28a3011320.js' crossorigin='anonymous'></script>
+
   
-  <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-5bc8f0e893964fafd40c9d8c66755d0f.css" />
-  <!-- CSSEND -->
+  <link href='tailwind.css?instanceId=9cd2a03f-adb9-47b7-bdea-0492df9a4e36' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style type='text/css'>
@@ -688,45 +712,6 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Definition of “Done”' href='process/Definition-of-Done'>
-      Definition of “Done”
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
     <a class='hover:underline truncate' title='Estimation Process' href='process/Estimation-Process'>
       Estimation Process
     </a>
@@ -768,6 +753,45 @@
   
     <a class='hover:underline truncate' title='Git Branching Scheme' href='process/Branching'>
       Git Branching Scheme
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Github PR Conventions' href='process/Github-PR-Conventions'>
+      Github PR Conventions
     </a>
     
       
@@ -1011,6 +1035,123 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Scrum Info' href='process/Scrum'>
+      Scrum Info
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Definition of “Done”' href='process/Scrum/Definition-of-Done'>
+      Definition of “Done”
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Definition of “Ready”' href='process/Scrum/Definition-of-Ready'>
+      Definition of “Ready”
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
   
 </div>
@@ -1562,6 +1703,42 @@
   
     
       
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Installation Instructions' href='cardano-wallet/user-guide/installation'>
+      Installation Instructions
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
     
     
 
@@ -1582,8 +1759,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Installation Instructions' href='cardano-wallet/user-guide/installation'>
-      Installation Instructions
+    <a class='hover:underline truncate' title='Docker' href='cardano-wallet/user-guide/installation/Docker'>
+      Docker
     </a>
     
       
@@ -1621,8 +1798,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Docker' href='cardano-wallet/user-guide/Docker'>
-      Docker
+    <a class='hover:underline truncate' title='Nix/NixOS' href='cardano-wallet/user-guide/installation/NixOS'>
+      Nix/NixOS
     </a>
     
       
@@ -1632,6 +1809,9 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
     
   
 </div>
@@ -1749,6 +1929,45 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='How to start wallet server' href='cardano-wallet/user-guide/common-use-cases/how-to-start-wallet-server'>
+      How to start wallet server
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
       <!-- Variable bindings for this tree-->
   
@@ -1930,8 +2149,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Transaction Metadata' href='cardano-wallet/user-guide/common-use-cases/TxMetadata'>
-      Transaction Metadata
+    <a class='hover:underline truncate' title='Delegation' href='cardano-wallet/user-guide/common-use-cases/delegation'>
+      Delegation
     </a>
     
       
@@ -1969,8 +2188,86 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Using with Plutus Application Backend' href='cardano-wallet/user-guide/common-use-cases/pab'>
-      Using with Plutus Application Backend
+    <a class='hover:underline truncate' title='Managing native assets' href='cardano-wallet/user-guide/common-use-cases/assets'>
+      Managing native assets
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='TxMetadata' href='cardano-wallet/user-guide/common-use-cases/TxMetadata'>
+      TxMetadata
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Using cardano-wallet with Plutus Application Backend' href='cardano-wallet/user-guide/common-use-cases/pab'>
+      Using cardano-wallet with Plutus Application Backend
     </a>
     
       
@@ -2128,6 +2425,123 @@
       </svg>
     
   
+    <a class='hover:underline truncate' title='Recovery Phrases' href='cardano-wallet/concepts/recovery-phrases'>
+      Recovery Phrases
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Master Key Generation' href='cardano-wallet/concepts/master-key-generation'>
+      Master Key Generation
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='HD Wallets' href='cardano-wallet/concepts/hierarchical-deterministic-wallets'>
+      HD Wallets
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
     <a class='hover:underline truncate' title='Address Derivation' href='cardano-wallet/concepts/address-derivation'>
       Address Derivation
     </a>
@@ -2206,123 +2620,6 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Coin Selection' href='cardano-wallet/concepts/coin-selection'>
-      Coin Selection
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='HD Wallets' href='cardano-wallet/concepts/hierarchical-deterministic-wallets'>
-      HD Wallets
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='Transaction Lifecycle' href='cardano-wallet/concepts/transaction-lifecycle'>
-      Transaction Lifecycle
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
     <a class='hover:underline truncate' title='UTxO' href='cardano-wallet/concepts/utxo'>
       UTxO
     </a>
@@ -2362,8 +2659,47 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Wallet Cryptography and Encoding' href='cardano-wallet/concepts/cryptography-and-encoding'>
-      Wallet Cryptography and Encoding
+    <a class='hover:underline truncate' title='Coin Selection' href='cardano-wallet/concepts/coin-selection'>
+      Coin Selection
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Transaction Lifecycle' href='cardano-wallet/concepts/transaction-lifecycle'>
+      Transaction Lifecycle
     </a>
     
       
@@ -2986,6 +3322,45 @@
       </svg>
     
   
+    <a class='hover:underline truncate' title='Cardano Eras' href='cardano-wallet/design/Eras'>
+      Cardano Eras
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
     <a class='hover:underline truncate' title='Notes about BIP-44' href='cardano-wallet/design/Notes-about-BIP-44'>
       Notes about BIP-44
     </a>
@@ -3036,6 +3411,201 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='WalletId' href='cardano-wallet/design/WalletId'>
+      WalletId
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='specs' href='cardano-wallet/design/specs'>
+      specs
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Specification: Light mode for cardano-wallet' href='cardano-wallet/design/specs/light-mode'>
+      Specification: Light mode for cardano-wallet
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Decision Records' href='cardano-wallet/design/records'>
+      Decision Records
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Nix Flake' href='cardano-wallet/design/records/2021-01-17-nix-flake'>
+      Nix Flake
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
   
 </div>
@@ -3263,10 +3833,6 @@
     <p class='mb-3'>
       It comes in different flavours: SDK or high-level APIs. Depending on the use-cases you have and the control that you seek, you may use any of the components below.
     </p>
-  <h2 id='cardano-network-protocol' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Cardano Network Protocol</h2>
-    <p class='mb-3'>
-      An implementation of the protocol is <a href='https://github.com/input-output-hk/ouroboros-network' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>here</a> and is realized through <a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a>, deployed as core and relay nodes to form the Cardano network.
-    </p>
   <h2 id='services' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Services</h2>
     <p class='mb-3'>
       Service applications for integrating with Cardano.
@@ -3295,7 +3861,7 @@
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-addresses</a>: Address generation, derivation & mnemonic manipulation.
+          <a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑addresses</a>: Address generation, derivation & mnemonic manipulation.
         </li>
       
         <li>
@@ -3311,51 +3877,58 @@
         </li>
       
     </ul>
-  <h2 id='high-level-diagram' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>High-Level Diagram</h2><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>%%{init: {'theme': 'forest', "flowchart" : { "curve" : "basis" } } }%%
-erDiagram
-  CARDANO-NODE ||--|{ CARDANO-SUBMIT-API : depends-on
-  CARDANO-NODE ||--|{ CARDANO-WALLET : depends-on
-  CARDANO-NODE ||--|{ CARDANO-DB-SYNC : depends-on
+  <h2 id='high-level-dependency-diagram' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>High-Level Dependency Diagram</h2><div class='mermaid-container'><div class='py-0.5 mb-3 text-sm'><pre><code id='deps-diagram' class='mermaid language-mermaid'>flowchart TB;
+  cardano-submit-api --&gt; cardano-node;
+  cardano-wallet     --&gt; cardano-node;
+  cardano-db-sync    --&gt; cardano-node;
 
-  CARDANO-DB-SYNC ||--|| POSTGRESQL : dumps-into
-  POSTGRESQL ||--|| SMASH : is-queried
-  POSTGRESQL ||--|| CARDANO-GRAPHQL : is-queried
-  POSTGRESQL ||--|| CARDANO-ROSETTA : is-queried
+  cardano-db-sync-- writes --&gt; PostgreSQL[(PostgreSQL)];
+  SMASH-- reads --&gt; PostgreSQL;
+  cardano-graphql-- reads --&gt; PostgreSQL;
+  cardano-rosetta-- reads --&gt; PostgreSQL;
 
-  CARDANO-GRAPHQL ||--|{ EXPLORER : depends-on
+  cardano-explorer[cardano-explorer fab:fa-react] --&gt; cardano-graphql;
 
-  SMASH ||--|{ CARDANO-WALLET: connects-to
-  CARDANO-WALLET ||--|{ DAEDALUS : depends-on</code></pre></div><h2 id='components' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Components</h2><h3 id='cardano-node' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a></h3>
+  cardano-wallet --&gt; SMASH;
+  daedalus[Daedalus fab:fa-react] --&gt; cardano-wallet;
+  
+  click cardano-submit-api mermaidClick;
+  click cardano-wallet mermaidClick;
+  click cardano-db-sync mermaidClick;
+  click SMASH mermaidClick;
+  click cardano-graphql mermaidClick;
+  click cardano-rosetta mermaidClick;
+  click cardano-explorer mermaidClick;
+  click PostgreSQL href "https://postgresql.org";
+  click daedalus href "https://github.com/input-output-hk/daedalus";
+
+  %% Styles for these classes are in static/adrestia.css.
+  class cardano-wallet,cardano-explorer,cardano-graphql,cardano-rosetta adrestia;
+  class cardano-node,cardano-submit-api,cardano-db-sync,SMASH cardano;
+  class daedalus daedalus;
+  class PostgreSQL other;</code></pre></div></div><h2 id='component-synopsis' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Component Synopsis</h2><h3 id='cardano-node' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a></h3>
     <p class='mb-3'>
       The core <a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a>, which participates in the Cardano network, and maintains the state of the Cardano blockchain ledger.
     </p>
-  
+  <h4 id='cardano-network-protocol' class='mt-6 mb-2 text-2xl font-bold text-gray-700'>Cardano Network Protocol</h4>
     <p class='mb-3'>
-      {{<span xmlhtmlRaw><hint info></span>}} Supported environments: Linux (64-bits), MacOS (64-bits), Windows (64-bits), Docker {{&lt; /hint &gt;}}
+      An implementation of the protocol is <a href='https://github.com/input-output-hk/ouroboros-network' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>here</a>, deployed as stake pool nodes and relay nodes to form the Cardano network.
     </p>
   <h3 id='cardano-wallet' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a></h3>
     <p class='mb-3'>
       <a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a> An HTTP REST API is recommended for 3rd party wallets and small exchanges who do not want to manage UTxOs for transactions themselves. Use it to send and receive payments from hierarchical deterministic wallets on the Cardano blockchain via HTTP REST or a command-line interface.
     </p>
-  
+  <h3 id='cardanolauncher' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-launcher' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑launcher</a></h3>
     <p class='mb-3'>
-      {{<span xmlhtmlRaw><hint info></span>}} Supported environments: Linux (64-bits), MacOS (64-bits), Windows (64-bits), Docker {{&lt; /hint &gt;}}
+      This is a small Typescript package for NodeJS applications which manages the configuration and lifetime of <a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a> and <a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a> processes.
     </p>
   <h3 id='cardano-db-sync' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-db-sync' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-db-sync</a></h3>
     <p class='mb-3'>
       This application stores blockchain data fetched from <a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a> in a PostgreSQL database to enable higher-level interfaces for blockchain exploration. It powers <a href='https://github.com/input-output-hk/cardano-graphql' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-graphql</a>.
     </p>
-  
-    <p class='mb-3'>
-      {{<span xmlhtmlRaw><hint info></span>}} Supported environments: Linux (64-bits), MacOS (64-bits), Docker {{&lt; /hint &gt;}}
-    </p>
   <h3 id='cardano-graphql' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-graphql' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-graphql</a></h3>
     <p class='mb-3'>
       A GraphQL API for Cardano, which also serves as the backend of <a href='https://explorer.cardano.org/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Cardano Explorer</a>.
-    </p>
-  
-    <p class='mb-3'>
-      {{<span xmlhtmlRaw><hint info></span>}} Supported environments: Linux (64-bits), MacOS (64-bits), Docker {{&lt; /hint &gt;}}
     </p>
   <h3 id='cardano-submit-api' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/cardano-node/tree/master/cardano-submit-api' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-submit-api</a></h3>
     <p class='mb-3'>
@@ -3369,7 +3942,56 @@ erDiagram
     <p class='mb-3'>
       <a href='https://github.com/input-output-hk/cardano-rosetta' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Cardano-rosetta</a> is an implementation of the <a href='https://www.rosetta-api.org/docs/1.4.4/welcome.html' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Rosetta</a> specification for Cardano. Rosetta is an open-source specification and set of tools that makes integrating with blockchains simpler, faster, and more reliable.
     </p>
-  <h2 id='components-1' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Components</h2><h3 id='apis' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>APIs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>name / link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>JSON/REST API for managing UTxOs in HD wallets</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-graphql' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-graphql</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>GraphQL/HTTP API for browsing on-chain data</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-rosetta' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-rosetta</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Implementation of <a href='https://www.rosetta-api.org/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Rosetta</a> spec for Cardano</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>~<a href='https://github.com/input-output-hk/cardano-rest' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-rest</a>~</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='clis' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>CLIs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/bech32' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>bech32</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Human-friendly Bech32 address encoding</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Command-line for interacting with cardano-wallet API</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Addresses and mnemonic manipulation & derivations</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-transactions' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-transactions</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='haskell-sdks' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Haskell SDKs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/bech32' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>bech32</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Human-friendly Bech32 address encoding</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Addresses and mnemonic manipulation & derivations</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-coin-selection' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-coin-selection</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-transactions' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-transactions</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='rust-sdks-webassembly-support' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Rust SDKs (+WebAssembly support)</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörmungandr</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/Emurgo/cardano-serialization-lib' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-serialization-lib</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Binary serialization of on-chain data types</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/Emurgo/react-native-haskell-shelley' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>react-native-haskell-shelley</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>React Native bindings for <a href='https://github.com/Emurgo/cardano-serialization-lib' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-serialization-lib</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr></tbody></table><h3 id='javascript-sdks' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>JavaScript SDKs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-launcher' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-launcher</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>node and cardano-wallet launcher for NodeJS applications</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Address validation and inspection</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr></tbody></table><h3 id='formal-specifications' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Formal Specifications</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/utxo-wallet-specification' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>utxo-wallet-specification</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Formal specification for a UTxO wallet</td></tr></tbody></table><h3 id='internal' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Internal</h3>
+  <h3 id='smash' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://github.com/input-output-hk/smash' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>SMASH</a></h3>
+    <p class='mb-3'>
+      The Stakepool Metadata Aggregation Server [for Hashes] is basically a proxy of the metadata published by stake pool owners. It improves performance of the network by taking load off the various web servers which host the actual metadata.
+    </p>
+  
+    <p class='mb-3'>
+      Clients such as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>cardano-wallet</code> must verify the integrity of metadata served by a SMASH server by comparing the metadata’s content hash with that in the stake pool registration certificate.
+    </p>
+  <h2 id='component-relationships-explorer-scenario' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Component Relationships: Explorer Scenario</h2><div class='mermaid-container'><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>erDiagram
+  CARDANO-NODE ||--|{ CARDANO-SUBMIT-API : connects-to
+  CARDANO-NODE ||--|{ CARDANO-DB-SYNC : depends-on
+
+  CARDANO-DB-SYNC ||--|| POSTGRESQL : dumps-into
+  POSTGRESQL ||--|| SMASH : is-queried
+  POSTGRESQL ||--|| CARDANO-GRAPHQL : is-queried
+  POSTGRESQL ||--|| CARDANO-ROSETTA : is-queried
+
+  CARDANO-GRAPHQL ||--|{ EXPLORER : depends-on</code></pre></div></div><h2 id='component-relationships-wallet-scenario' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Component Relationships: Wallet Scenario</h2><div class='mermaid-container'><div class='py-0.5 mb-3 text-sm'><pre><code id='blockchart-diagram' class='mermaid language-mermaid'>flowchart TB;
+  subgraph local system
+    Daedalus -- calls --&gt; cardano-launcher;
+    cardano-launcher -. spawns .-&gt; cardano-wallet;
+    cardano-launcher -. spawns .-&gt; cardano-node;
+
+    %% by HTTP REST API
+    Daedalus -- queries --&gt; cardano-wallet;
+
+    %% Local socket/named pipe
+    cardano-wallet -- queries --&gt; cardano-node;
+  end
+  
+
+  subgraph Internet
+    %% HTTP API
+    cardano-wallet -- queries --&gt; SMASH;
+
+    %% Network protocol
+    cardano-node -- syncs --&gt; blockchain;
+  end
+  
+  class cardano-wallet adrestia;
+  class Daedalus,cardano-launcher daedalus;
+  class cardano-node,SMASH cardano;
+  class blockchain other;
+  
+  click cardano-wallet mermaidClick;
+  click cardano-launcher mermaidClick;
+  click cardano-node mermaidClick;
+  click SMASH mermaidClick;
+  click Daedalus href "https://github.com/input-output-hk/daedalus";
+  click blockchain call mermaidClick("cardano-network-protocol");</code></pre></div></div><h2 id='components' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Components</h2><h3 id='apis' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>APIs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>JSON/REST API for managing UTxOs in HD wallets</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-graphql' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-graphql</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>GraphQL/HTTP API for browsing on-chain data</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-rosetta' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-rosetta</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Implementation of <a href='https://www.rosetta-api.org/' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>Rosetta</a> spec for Cardano</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><s><a href='https://github.com/input-output-hk/cardano-rest' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-rest</a></s></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='clis' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>CLIs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/bech32' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>bech32</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Human-friendly Bech32 address encoding</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Command-line for interacting with cardano-wallet API</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Addresses and mnemonic manipulation & derivations</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><s><a href='https://github.com/input-output-hk/cardano-transactions' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-transactions</a></s></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='haskell-sdks' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Haskell SDKs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/bech32' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>bech32</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Human-friendly Bech32 address encoding</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Addresses and mnemonic manipulation & derivations</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><s><a href='https://github.com/input-output-hk/cardano-coin-selection' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-coin-selection</a></s></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><s><a href='https://github.com/input-output-hk/cardano-transactions' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-transactions</a></s></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><em>Deprecated</em></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td></tr></tbody></table><h3 id='rust-sdks-webassembly-support' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Rust SDKs (+WebAssembly support)</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörmungandr</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/Emurgo/cardano-serialization-lib' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-serialization-lib</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Binary serialization of on-chain data types</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/Emurgo/react-native-haskell-shelley' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>react-native-haskell-shelley</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>React Native bindings for <a href='https://github.com/Emurgo/cardano-serialization-lib' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-serialization-lib</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>N/A</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>🚧</td></tr></tbody></table><h3 id='javascript-sdks' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>JavaScript SDKs</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Byron</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jörm</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shelley</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Mary</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Alonzo</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-launcher' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑launcher</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Typescript library for starting and stopping <a href='https://github.com/input-output-hk/cardano-wallet' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-wallet</a> and <a href='https://github.com/input-output-hk/cardano-node' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano-node</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>❌</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/cardano-addresses' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>cardano‑addresses</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Address validation and inspection</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>✔</td></tr></tbody></table><h3 id='formal-specifications' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Formal Specifications</h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/utxo-wallet-specification' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>utxo-wallet-specification</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Formal specification for a UTxO wallet</td></tr></tbody></table><h3 id='internal' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>Internal</h3>
     <blockquote class='py-0.5 px-4 mb-3 italic border-l-4 bg-gray-50 text-gray-600 border-gray-400 quote'>
       
     <p class='mb-3'>
@@ -3377,11 +3999,7 @@ erDiagram
     </p>
   
     </blockquote>
-  <table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>name / link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>description</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/persistent' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>persistent</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fork of the persistent Haskell library maintained for cardano-wallet</td></tr></tbody></table><h1 id='contributing' class='pb-2 mb-2 text-5xl font-bold text-center'>Contributing</h1>
-    <p class='mb-3'>
-      See <span title='Link is broken'><s>[CONTRIBUTING.md](CONTRIBUTING.md)</s>❌</span>
-    </p>
-  
+  <table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Name / Link</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Description</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='https://github.com/input-output-hk/persistent' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>persistent</a></td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fork of the persistent Haskell library maintained for cardano-wallet</td></tr></tbody></table>
   <!-- What goes in this file will appear below the note body-->
 </article>
             <div class='flex flex-col lg:flex-row lg:space-x-2'>
@@ -3428,12 +4046,6 @@ erDiagram
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-indigo-500' href='-/tags/needs/cleanup'>
-        <!-- DoNotFormat -->
-        #needs/cleanup
-        <!-- DoNotFormat -->
-      </a>
-    
   </section>
 
             <!-- What goes in this file will at the very end of the main div -->
@@ -3458,7 +4070,7 @@ erDiagram
     </a>
   </div>
   <div>
-    <a href='https://note.ema.srid.ca' target='_blank' title='Generated by Emanote 0.3.15.2'>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.4.10.2'>
       <img class='w-6 h-6 hover:text-indigo-700' src='_emanote-static/emanote-logo.svg' />
     </a>
   </div>

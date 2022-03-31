@@ -17,15 +17,37 @@
       <base href='/adrestia/' />
       <link href='static/favicon.png' rel='icon' />
     
-    <!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
+    <meta name='generator' content='Emanote' />
+<meta http-equiv='cache-control' content='private, max-age=60' />
+<meta http-equiv='Expires' content='60' />
+<link href='static/adrestia.css' rel='stylesheet' />
+<script src='static/adrestia.js'></script>
+
+<!-- mermaid.js --><script src='https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'></script>
 <script>
-  mermaid.initialize({startOnLoad:false});
-  mermaid.init(undefined,document.querySelectorAll(".mermaid"));
+  var myMermaidConfig = {
+    // lets mermaid work with emanote live-reloading
+    startOnLoad: false,
+    // permit clicks
+    securityLevel: "loose",
+    // set default theme with primary colour to tailwind blue
+    theme: "base",
+    themeVariables: {
+      primaryColor: "#e0e7ff",
+      secondaryColor: "#fffde0"
+    },
+    // d3js rounded lines in flowcharts
+    flowchart: {
+      curve: "basis",
+      htmlLabels: true
+    }
+  };
+  mermaid.initialize(myMermaidConfig);
+  mermaid.init(myMermaidConfig, document.querySelectorAll(".mermaid"));
 </script>
+
   
-  <!-- CSSSTART -->
-	<link rel="stylesheet" href="emanote-compiled-5bc8f0e893964fafd40c9d8c66755d0f.css" />
-  <!-- CSSEND -->
+  <link href='tailwind.css?instanceId=9cd2a03f-adb9-47b7-bdea-0492df9a4e36' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style type='text/css'>
@@ -701,45 +723,6 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Definition of “Done”' href='process/Definition-of-Done'>
-      Definition of “Done”
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
     <a class='hover:underline truncate' title='Estimation Process' href='process/Estimation-Process'>
       Estimation Process
     </a>
@@ -781,6 +764,45 @@
   
     <a class='hover:underline truncate' title='Git Branching Scheme' href='process/Branching'>
       Git Branching Scheme
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Github PR Conventions' href='process/Github-PR-Conventions'>
+      Github PR Conventions
     </a>
     
       
@@ -1024,6 +1046,123 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Scrum Info' href='process/Scrum'>
+      Scrum Info
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Definition of “Done”' href='process/Scrum/Definition-of-Done'>
+      Definition of “Done”
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Definition of “Ready”' href='process/Scrum/Definition-of-Ready'>
+      Definition of “Ready”
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
   
 </div>
@@ -1575,6 +1714,42 @@
   
     
       
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Installation Instructions' href='cardano-wallet/user-guide/installation'>
+      Installation Instructions
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
     
     
 
@@ -1595,8 +1770,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Installation Instructions' href='cardano-wallet/user-guide/installation'>
-      Installation Instructions
+    <a class='hover:underline truncate' title='Docker' href='cardano-wallet/user-guide/installation/Docker'>
+      Docker
     </a>
     
       
@@ -1634,8 +1809,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Docker' href='cardano-wallet/user-guide/Docker'>
-      Docker
+    <a class='hover:underline truncate' title='Nix/NixOS' href='cardano-wallet/user-guide/installation/NixOS'>
+      Nix/NixOS
     </a>
     
       
@@ -1645,6 +1820,9 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
     
   
 </div>
@@ -1762,6 +1940,45 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='How to start wallet server' href='cardano-wallet/user-guide/common-use-cases/how-to-start-wallet-server'>
+      How to start wallet server
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
       <!-- Variable bindings for this tree-->
   
@@ -1943,8 +2160,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Transaction Metadata' href='cardano-wallet/user-guide/common-use-cases/TxMetadata'>
-      Transaction Metadata
+    <a class='hover:underline truncate' title='Delegation' href='cardano-wallet/user-guide/common-use-cases/delegation'>
+      Delegation
     </a>
     
       
@@ -1982,8 +2199,86 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Using with Plutus Application Backend' href='cardano-wallet/user-guide/common-use-cases/pab'>
-      Using with Plutus Application Backend
+    <a class='hover:underline truncate' title='Managing native assets' href='cardano-wallet/user-guide/common-use-cases/assets'>
+      Managing native assets
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='TxMetadata' href='cardano-wallet/user-guide/common-use-cases/TxMetadata'>
+      TxMetadata
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Using cardano-wallet with Plutus Application Backend' href='cardano-wallet/user-guide/common-use-cases/pab'>
+      Using cardano-wallet with Plutus Application Backend
     </a>
     
       
@@ -2141,6 +2436,123 @@
       </svg>
     
   
+    <a class='hover:underline truncate' title='Recovery Phrases' href='cardano-wallet/concepts/recovery-phrases'>
+      Recovery Phrases
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Master Key Generation' href='cardano-wallet/concepts/master-key-generation'>
+      Master Key Generation
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='HD Wallets' href='cardano-wallet/concepts/hierarchical-deterministic-wallets'>
+      HD Wallets
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
     <a class='hover:underline truncate' title='Address Derivation' href='cardano-wallet/concepts/address-derivation'>
       Address Derivation
     </a>
@@ -2219,119 +2631,6 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Coin Selection' href='cardano-wallet/concepts/coin-selection'>
-      Coin Selection
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
-    <a class='hover:underline truncate' title='HD Wallets' href='cardano-wallet/concepts/hierarchical-deterministic-wallets'>
-      HD Wallets
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-indigo-600 hover:underline truncate' title='Transaction Lifecycle' href='cardano-wallet/concepts/transaction-lifecycle'>
-      Transaction Lifecycle
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-    
-      
-    
-    
-
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
-        </path>
-      </svg>
-    
-  
     <a class='hover:underline truncate' title='UTxO' href='cardano-wallet/concepts/utxo'>
       UTxO
     </a>
@@ -2371,8 +2670,43 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Wallet Cryptography and Encoding' href='cardano-wallet/concepts/cryptography-and-encoding'>
-      Wallet Cryptography and Encoding
+    <a class='hover:underline truncate' title='Coin Selection' href='cardano-wallet/concepts/coin-selection'>
+      Coin Selection
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-indigo-600 hover:underline truncate' title='Transaction Lifecycle' href='cardano-wallet/concepts/transaction-lifecycle'>
+      Transaction Lifecycle
     </a>
     
       
@@ -2995,6 +3329,45 @@
       </svg>
     
   
+    <a class='hover:underline truncate' title='Cardano Eras' href='cardano-wallet/design/Eras'>
+      Cardano Eras
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
     <a class='hover:underline truncate' title='Notes about BIP-44' href='cardano-wallet/design/Notes-about-BIP-44'>
       Notes about BIP-44
     </a>
@@ -3045,6 +3418,201 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='WalletId' href='cardano-wallet/design/WalletId'>
+      WalletId
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='specs' href='cardano-wallet/design/specs'>
+      specs
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Specification: Light mode for cardano-wallet' href='cardano-wallet/design/specs/light-mode'>
+      Specification: Light mode for cardano-wallet
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+      
+    
+
+
+
+  
+  
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg xmlns='http://www.w3.org/2000/svg' class='w-4 h-4 flex-shrink-0 inline text-gray-700' viewBox='0 0 20 20' fill='currentColor'>
+        <path fill-rule='evenodd' d='M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z' clip-rule='evenodd'></path>
+        <path d='M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z'></path>
+      </svg>
+      
+  
+    <a class='font-bold hover:underline truncate' title='Decision Records' href='cardano-wallet/design/records'>
+      Decision Records
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='Nix Flake' href='cardano-wallet/design/records/2021-01-17-nix-flake'>
+      Nix Flake
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
   
 </div>
@@ -3264,30 +3832,32 @@
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  <h2 id='states' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>States</h2><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>%%{init: {'theme': 'forest' } }%%
-stateDiagram
+  <div class='px-3 py-1 rounded shadow bg-yellow-100 mx-2 transform -skew-y-1 scale-95 hover:scale-100 hover:border-yellow-400 hover:shadow-lg border-t-8 border-yellow-200 mb-8 mt-8'>
+    <p class='mb-3'>
+      
+    <svg xmlns='http://www.w3.org/2000/svg' class='inline h-4 w-4 mb-1 text-gray-600 stroke-current' fill='none' viewBox='0 0 28 28'><desc>☐</desc><rect stroke-width='3' x='2' y='2' width='24' height='24' rx='3'></rect></svg>
+<span>
+  
+      This needs to be updated to include transaction resubmission by the wallet.
+    
+</span>
+
+  
+    </p>
+  </div><h2 id='states' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>States</h2><div class='mermaid-container'><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>stateDiagram
   [*] --&gt; pending: request
   [*] --&gt; in_ledger: discover
   pending --&gt; in_ledger: discover
   pending --&gt; [*]: forget
-  in_ledger --&gt; pending: rollback</code></pre></div>
-    <p class='mb-3'>
-      <span class='emoji' data-emoji='information_source' style='font-family: emoji'>ℹ️</span> About <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>forget</code>
-    </p>
-  
+  in_ledger --&gt; pending: rollback</code></pre></div></div><h3 id='state-transition-forget' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>State transition: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>forget</code></h3>
     <p class='mb-3'>
       Importantly, a transaction, when sent, cannot be cancelled. One can only request forgetting about it in order to try spending (concurrently) the same UTxO in another transaction. But, the transaction may still show up later in a block and therefore, appear in the wallet.
     </p>
-  
-    <p class='mb-3'>
-      <span class='emoji' data-emoji='information_source' style='font-family: emoji'>ℹ️</span> About <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>discover</code>
-    </p>
-  
+  <h3 id='state-transition-discover' class='mt-6 mb-2 text-3xl font-bold text-gray-700'>State transition: <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>discover</code></h3>
     <p class='mb-3'>
       Discovering a transaction happens regardless of a transaction being present or not as <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pending</code>. Actually, only outgoing transactions are going through the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pending</code> state. Incoming ones or, outgoing ones that have been forgotten may be discovered directly in blocks.
     </p>
-  <h2 id='submission' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Submission</h2><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>%%{init: {'theme': 'forest' } }%%
-sequenceDiagram
+  <h2 id='submission' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Submission</h2><div class='mermaid-container'><div class='py-0.5 mb-3 text-sm'><pre><code class='mermaid language-mermaid'>sequenceDiagram
   participant Wallet Client
   participant Wallet Server
   participant Network
@@ -3301,9 +3871,9 @@ sequenceDiagram
 
   Network -&gt;&gt; Network: Validate transaction structure
   Network --&gt;&gt; Wallet Server: (ERR) Malformed transaction
-  Network -&gt;&gt;- Wallet Server: Accepted
-
   Wallet Server --&gt;&gt; Wallet Client: 500 Internal Server Error
+
+  Network -&gt;&gt;- Wallet Server: Accepted
   Wallet Server -&gt;&gt;- Wallet Client: 202 Accepted
 
   Network -&gt;&gt; Network: Broadcast transaction to peers
@@ -3311,12 +3881,49 @@ sequenceDiagram
       Network -&gt;&gt; Network: Insert or discard transaction(s)
       Network -&gt;&gt; Wallet Server: Yield new block
       Wallet Server -&gt;&gt; Wallet Server: Discover transaction(s)
-  end</code></pre></div>
+  end</code></pre></div></div>
   <!-- What goes in this file will appear below the note body-->
 </article>
             <div class='flex flex-col lg:flex-row lg:space-x-2'>
               
               
+  <div class='flex-1 p-4 mt-8 bg-gray-100 rounded'>
+    <header class='mb-2 text-xl font-semibold text-gray-500'>Links to this page</header>
+    <ul class='space-y-1'>
+      
+        <li>
+          <a class='text-indigo-600 mavenLinkBold hover:bg-indigo-50' href='cardano-wallet/concepts'>
+            Key Concepts
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
+      <div><a href='cardano-wallet/concepts/transaction-lifecycle' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Transaction Lifecycle</a></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+        <li>
+          <a class='text-indigo-600 mavenLinkBold hover:bg-indigo-50' href='cardano-wallet/user-guide/common-use-cases/how-to-make-a-transaction'>
+            How to make a transaction
+          </a>
+          
+            <div class='mb-4 overflow-auto text-sm text-gray-500'>
+  
+    <div class='pl-2 mt-2 border-l-2 border-indigo-200 hover:border-indigo-500'>
+      <div><p>For more information about transactions lifecycle, have a look at <a href='cardano-wallet/concepts/transaction-lifecycle' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Transaction Lifecycle</a>.</p></div>
+    </div>
+  
+</div>
+          
+        </li>
+      
+    </ul>
+  </div>
+
             </div>
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
@@ -3345,7 +3952,7 @@ sequenceDiagram
     </a>
   </div>
   <div>
-    <a href='https://note.ema.srid.ca' target='_blank' title='Generated by Emanote 0.3.15.2'>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.4.10.2'>
       <img class='w-6 h-6 hover:text-indigo-700' src='_emanote-static/emanote-logo.svg' />
     </a>
   </div>
