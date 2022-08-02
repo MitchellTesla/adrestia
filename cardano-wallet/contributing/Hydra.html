@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
@@ -8,8 +9,9 @@
   </title>
   
     
-      <meta property='og:description' content />
+      <meta property='og:description' content='The Nix build server - not to be confused with Ouroboros Hydra.' />
       <meta property='og:site_name' content='Adrestia Project Docs' />
+      <meta property='og:image' content />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Hydra CI' />
     
@@ -25,7 +27,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=9cd2a03f-adb9-47b7-bdea-0492df9a4e36' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=04b6d1fe-b569-426c-87e3-6bdd8e04c3ec' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style type='text/css'>
@@ -40,15 +42,21 @@
 <style>
   @font-face {
     font-family: 'MavenPro';
-    src: url('_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format("truetype");
+    /* FIXME: This ought to be: ${ema:emanoteStaticLayerUrl}/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf */
+    src: url(_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf) format("truetype");
     font-display: swap;
   }
 
   body {
     font-family: 'MavenPro', sans-serif;
+    /* font-variation-settings: 'wght'300; */
   }
 
   a.mavenLinkBold {
+    font-variation-settings: 'wght'500;
+  }
+
+  strong {
     font-variation-settings: 'wght'500;
   }
 
@@ -1692,6 +1700,45 @@
   
     
       
+    
+    
+
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        </path>
+      </svg>
+    
+  
+    <a class='hover:underline truncate' title='security' href='cardano-wallet/user-guide/security'>
+      security
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
+    
+      
       
     
 
@@ -3073,8 +3120,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Release Checklist' href='cardano-wallet/contributing/Release-Checklist'>
-      Release Checklist
+    <a class='hover:underline truncate' title='Release Process' href='cardano-wallet/contributing/Release-Process'>
+      Release Process
     </a>
     
       
@@ -3820,7 +3867,7 @@
     </p>
   <h2 id='jobset' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Jobset</h2>
     <p class='mb-3'>
-      The Hydra jobsets are defined by the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hydraJobs</code>, <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hydraJobsPr</code> and <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hydraJobsBors</code> flake attributes (cf. <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>mkSystemHydraJobs</code> function <a href='https://github.com/input-output-hk/cardano-wallet/blob/master/flake.nix' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>flake.nix</code></a>). There are slight variations between them to avoid test results caching for bors builds and to disable integration tests for PRs.
+      The Hydra jobsets are defined by the <code class='py-0.5 px-0.5 bg-gray-100'>hydraJobs</code>, <code class='py-0.5 px-0.5 bg-gray-100'>hydraJobsPr</code> and <code class='py-0.5 px-0.5 bg-gray-100'>hydraJobsBors</code> flake attributes (cf. <code class='py-0.5 px-0.5 bg-gray-100'>mkSystemHydraJobs</code> function <a href='https://github.com/input-output-hk/cardano-wallet/blob/master/flake.nix' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-0.5 bg-gray-100'>flake.nix</code></a>). There are slight variations between them to avoid test results caching for bors builds and to disable integration tests for PRs.
     </p>
   
     <p class='mb-3'>
@@ -3856,7 +3903,7 @@
     </p>
   
     <p class='mb-3'>
-      This job is set up with the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>mkRequiredJob</code> function in <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>flake.nix</code>.
+      This job is set up with the <code class='py-0.5 px-0.5 bg-gray-100'>mkRequiredJob</code> function in <code class='py-0.5 px-0.5 bg-gray-100'>flake.nix</code>.
     </p>
   <h2 id='build-products' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Build Products</h2>
     <p class='mb-3'>
@@ -3864,15 +3911,15 @@
     </p>
   
     <p class='mb-3'>
-      When you click the “latest successful build” link for a job, it redirects (HTTP 302 Moved Temporarily) to the location of the <em>current latest successful build</em>. To make a download link which is always the latest, click the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>Details</code> button next a build product, and copy the links.
+      When you click the “latest successful build” link for a job, it redirects (HTTP 302 Moved Temporarily) to the location of the <em>current latest successful build</em>. To make a download link which is always the latest, click the <code class='py-0.5 px-0.5 bg-gray-100'>Details</code> button next a build product, and copy the links.
     </p>
   
     <p class='mb-3'>
-      A nix derivation builder script can register build products by adding lines to the file <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>$out/nix-support/hydra-build-products</code>.
+      A nix derivation builder script can register build products by adding lines to the file <code class='py-0.5 px-0.5 bg-gray-100'>$out/nix-support/hydra-build-products</code>.
     </p>
   <h2 id='evaluation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Evaluation</h2>
     <p class='mb-3'>
-      Hydra evaluates the <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>hydraJobs</code> attribute of <a href='https://github.com/input-output-hk/cardano-wallet/blob/master/flake.nix' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>flake.nix</code></a> file on the Hydra master host (<a href='https://hydra.iohk.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>hydra.iohk.io</a>). It then sends the jobs out to the build farm to be built.
+      Hydra evaluates the <code class='py-0.5 px-0.5 bg-gray-100'>hydraJobs</code> attribute of <a href='https://github.com/input-output-hk/cardano-wallet/blob/master/flake.nix' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'><code class='py-0.5 px-0.5 bg-gray-100'>flake.nix</code></a> file on the Hydra master host (<a href='https://hydra.iohk.io' class='text-indigo-600 hover:underline' target='_blank' rel='noopener'>hydra.iohk.io</a>). It then sends the jobs out to the build farm to be built.
     </p>
   
     <p class='mb-3'>
@@ -3880,7 +3927,7 @@
     </p>
   
     <p class='mb-3'>
-      <strong>Note</strong>: If evaluation fails, the Hydra eval runner will retry until it succeeds. The <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>ci/hydra-eval</code> status will change from pending to failed, until the evaluation succeeds.
+      <strong>Note</strong>: If evaluation fails, the Hydra eval runner will retry until it succeeds. The <code class='py-0.5 px-0.5 bg-gray-100'>ci/hydra-eval</code> status will change from pending to failed, until the evaluation succeeds.
     </p>
   <h2 id='restarting-builds' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Restarting builds</h2><div class='flex justify-center items-center mx-auto px-8'>
     <p class='mb-3'>
@@ -3988,7 +4035,7 @@
     </a>
   </div>
   <div>
-    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.4.10.2'>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.6.15.1'>
       <img class='w-6 h-6 hover:text-indigo-700' src='_emanote-static/emanote-logo.svg' />
     </a>
   </div>
